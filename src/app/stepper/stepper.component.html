@@ -1,0 +1,47 @@
+<section>
+  <div class="d-flex container justify-content-center my-4">
+    <div class="d-flex align-items-center">
+      <span
+        class="step text-center border border-primary border-2 bg-white rounded-circle"
+        >1</span
+      >
+      <div class="step-line bg-primary"></div>
+    </div>
+    <div class="d-flex align-items-center">
+      <span
+        class="step text-center border border-primary border-2 bg-white rounded-circle"
+        >2</span
+      >
+      <div class="step-line bg-primary"></div>
+    </div>
+    <div class="d-flex align-items-center">
+      <span
+        class="step text-center border border-primary border-2 bg-white rounded-circle"
+        >3</span
+      >
+      <div class="step-line bg-primary"></div>
+    </div>
+    <div class="d-flex align-items-center">
+      <span
+        class="step text-center border border-primary border-2 bg-white rounded-circle"
+        >4</span
+      >
+    </div>
+  </div>
+  <div class="d-flex container my-4 justify-content-center">
+    <button
+      [disabled]="currentStep === 1"
+      class="btn btn-primary mx-4"
+      (click)="prevStep()"
+    >
+      Back
+    </button>
+    <button
+      [disabled]="currentStep === 4"
+      class="btn btn-primary"
+      (click)="nextStep()"
+    >
+      Next
+    </button>
+  </div>
+</section>
