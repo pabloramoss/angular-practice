@@ -1,37 +1,16 @@
 <div class="container text-center">
   <h1>50 PROJECTS 50 DAYS</h1>
   <div class="row">
-    <!-- First project -->
-    <div class="col-12 col-md-6 col-lg-4">
-      <div class="project-card">
-        <img src="https://via.placeholder.com/300" alt="Project Image" />
-        <h4>Stepper</h4>
-        <button class="btn btn-primary" [routerLink]="'/project-1'">
-          Live demo
-        </button>
+    <ng-container *ngFor="let project of projects">
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="project-card">
+          <img src="https://via.placeholder.com/300" alt="Project Image" />
+          <h4>{{ project.name }}</h4>
+          <button class="btn btn-primary" [routerLink]="project.path">
+            Live demo
+          </button>
+        </div>
       </div>
-    </div>
-
-    <!-- Second project-->
-    <div class="col-12 col-md-6 col-lg-4">
-      <div class="project-card">
-        <img src="https://via.placeholder.com/300" alt="Project Image" />
-        <h4>Todo list</h4>
-        <button class="btn btn-primary" [routerLink]="'/project-2'">
-          Live demo
-        </button>
-      </div>
-    </div>
-
-    <!-- Third project-->
-    <div class="col-12 col-md-6 col-lg-4">
-      <div class="project-card">
-        <img src="https://via.placeholder.com/300" alt="Project Image" />
-        <h4>Todo list</h4>
-        <button class="btn btn-primary" [routerLink]="'/project-2'">
-          Live demo
-        </button>
-      </div>
-    </div>
+    </ng-container>
   </div>
 </div>

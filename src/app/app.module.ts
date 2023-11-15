@@ -8,6 +8,8 @@ import { StepperComponent } from './stepper/stepper.component';
 import { HomeComponent } from './home/home.component';
 import { TodoListComponent } from './todo-list/todo-list.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { PokedexComponent } from './pokedex/pokedex.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -15,12 +17,14 @@ import { NavbarComponent } from './navbar/navbar.component';
     StepperComponent,
     HomeComponent,
     TodoListComponent,
-    NavbarComponent
+    NavbarComponent,
+    PokedexComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
