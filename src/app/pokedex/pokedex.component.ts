@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 })
 export class PokedexComponent {
   private apiUrl = 'https://pokeapi.co/api/v2';
+  pokemons: any[] = [];
 
   constructor(private https: HttpClient) {
   }
@@ -18,8 +19,9 @@ export class PokedexComponent {
 
   getPokemons() {
     this.https.get(`${this.apiUrl}/pokemon?limit=151`).subscribe(
-      (data) => {
+      (data: any) => {
         console.log(data);
+        this.pokemons = data.results;
       },
       (error) => {
         console.error(error);
